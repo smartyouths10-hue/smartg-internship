@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMARTG SDN BHD · 实习生招募 Internship</title>
+  <meta name="description" content="加入 SMARTG SDN BHD 实习计划，真项目、真团队、真成长。" />
+
+  <!-- ============================================================= -->
+  <!--  Tailwind CSS (CDN)                                           -->
+  <!-- ============================================================= -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts: 衬线做标题(quiet luxury感) + 无衬线做正文 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:    '#FAF7F2',
+            sand:     '#F1E9DD',
+            beige:    '#E7DBC9',
+            clay:     '#A98467',
+            mocha:    '#8A6F55',
+            espresso: '#3E3528',
+            taupe:    '#8C8273',
+          },
+          fontFamily: {
+            serif:  ['"Cormorant Garamond"', '"Noto Serif SC"', 'serif'],
+            sans:   ['"Noto Sans SC"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+
+    /* fade-in on scroll */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    /* 隐藏数字输入框的上下箭头 */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type=number] { -moz-appearance: textfield; }
+
+    /* FAQ 折叠动画 */
+    .faq-body { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+  </style>
+</head>
+
+<body class="bg-cream text-espresso font-sans antialiased">
+
+  <!-- ================= NAV ================= -->
+  <header class="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-cream/70 border-b border-beige/60">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-full bg-clay flex items-center justify-center text-cream font-serif text-lg">S</span>
+        <span class="font-serif text-xl tracking-wide text-espresso">SMARTG</span>
+      </a>
+      <span class="text-xs sm:text-sm text-taupe tracking-widest uppercase">Internship 2026</span>
+    </div>
+  </header>
+
+  <!-- ================= 1. HERO ================= -->
+  <section id="hero" class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+    <!-- 背景大图：换成你们自己的团队照 -->
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
+         alt="SMARTG 团队" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-espresso/80 via-espresso/55 to-espresso/20"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 text-cream">
+      <span class="inline-block mb-5 px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-wider bg-cream/15 backdrop-blur border border-cream/30">
+        2026 实习生招募中 · Now Hiring
+      </span>
+      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl leading-tight mb-6 max-w-3xl">
+        加入 SMARTG，<br/>开启你的第一段<br class="sm:hidden"/>真实职场经历
+      </h1>
+      <p class="text-base sm:text-xl text-cream/80 max-w-xl mb-10 font-light leading-relaxed">
+        不限岗位 — 先聊聊，我们再依你的兴趣与能力，为你分派最适合的位置。
+        <span class="whitespace-nowrap">真项目、真成长。</span>
+      </p>
+
+      <!-- CTA #1 -->
+      <button data-cta="hero"
+        class="group inline-flex items-center gap-3 bg-clay hover:bg-mocha transition-all px-8 py-4 rounded-full text-cream text-lg shadow-xl shadow-espresso/30">
+        我想加入 <span class="transition-transform group-hover:translate-x-1">→</span>
+      </button>
+
+      <p class="mt-6 text-sm text-cream/60">📍 名额有限 · 24 小时内回复 · 全程线上申请</p>
+    </div>
+  </section>
+
+  <!-- ================= 2. STATS ================= -->
+  <section class="bg-espresso text-cream">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="reveal"><div class="font-serif text-4xl sm:text-5xl text-clay">20<span class="text-2xl">+</span></div><div class="mt-2 text-sm text-cream/70">培养实习生</div></div>
+      <div class="reveal"><div class="font-serif text-4xl sm:text-5xl text-clay">3</div><div class="mt-2 text-sm text-cream/70">个月成长计划</div></div>
+      <div class="reveal"><div class="font-serif text-4xl sm:text-5xl text-clay">100<span class="text-2xl">%</span></div><div class="mt-2 text-sm text-cream/70">真实项目实战</div></div>
+      <div class="reveal"><div class="font-serif text-4xl sm:text-5xl text-clay">∞</div><div class="mt-2 text-sm text-cream/70">转正可能性</div></div>
+    </div>
+  </section>
+
+  <!-- ================= 3. WHY JOIN ================= -->
+  <section id="why" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-clay tracking-widest text-sm uppercase mb-3">Why SMARTG</p>
+        <h2 class="font-serif text-3xl sm:text-5xl">为什么选择我们</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- card -->
+        <div class="reveal bg-white rounded-3xl p-8 shadow-sm border border-beige/60 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-sand flex items-center justify-center text-2xl mb-5">🚀</div>
+          <h3 class="font-serif text-2xl mb-3">真实项目</h3>
+          <p class="text-taupe leading-relaxed text-sm">从第一天起就参与真实的客户项目，不做无意义的打杂。</p>
+        </div>
+        <div class="reveal bg-white rounded-3xl p-8 shadow-sm border border-beige/60 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-sand flex items-center justify-center text-2xl mb-5">🤝</div>
+          <h3 class="font-serif text-2xl mb-3">一对一带教</h3>
+          <p class="text-taupe leading-relaxed text-sm">资深前辈手把手指导，每周复盘，让你的成长看得见。</p>
+        </div>
+        <div class="reveal bg-white rounded-3xl p-8 shadow-sm border border-beige/60 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-sand flex items-center justify-center text-2xl mb-5">🌱</div>
+          <h3 class="font-serif text-2xl mb-3">转正机会</h3>
+          <p class="text-taupe leading-relaxed text-sm">表现优秀者可直接转为正式员工，实习即是入职的起点。</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-14 reveal">
+        <!-- CTA #2 -->
+        <button data-cta="why"
+          class="inline-flex items-center gap-2 border-2 border-clay text-clay hover:bg-clay hover:text-cream transition-all px-8 py-3.5 rounded-full text-lg">
+          了解更多 · 立即报名
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. CULTURE / LIFE (照片墙) ================= -->
+  <section id="culture" class="py-24 bg-sand">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <p class="text-clay tracking-widest text-sm uppercase mb-3">Life at SMARTG</p>
+        <h2 class="font-serif text-3xl sm:text-5xl">这里的日常</h2>
+        <p class="text-taupe mt-4 max-w-md mx-auto">认真工作，也认真生活 — 我们相信好的团队氛围。</p>
+      </div>
+
+      <!-- 照片网格：全部换成你们真实的照片 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[180px] sm:auto-rows-[220px]">
+        <img class="reveal rounded-2xl object-cover w-full h-full shadow-sm row-span-2" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="" />
+        <img class="reveal rounded-2xl object-cover w-full h-full shadow-sm" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="" />
+        <img class="reveal rounded-2xl object-cover w-full h-full shadow-sm" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="" />
+        <img class="reveal rounded-2xl object-cover w-full h-full shadow-sm row-span-2" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=600&q=80" alt="" />
+        <img class="reveal rounded-2xl object-cover w-full h-full shadow-sm" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="" />
+        <img class="reveal rounded-2xl object-cover w-full h-full shadow-sm" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="" />
+        <img class="reveal rounded-2xl object-cover w-full h-full shadow-sm col-span-2" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80" alt="" />
+        <img class="reveal rounded-2xl object-cover w-full h-full shadow-sm" src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&q=80" alt="" />
+        <img class="reveal rounded-2xl object-cover w-full h-full shadow-sm" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="" />
+      </div>
+
+      <div class="text-center mt-14 reveal">
+        <!-- CTA #3 -->
+        <button data-cta="culture"
+          class="inline-flex items-center gap-2 bg-clay hover:bg-mocha text-cream transition-all px-8 py-3.5 rounded-full text-lg shadow-lg shadow-clay/20">
+          成为我们的一员 →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. WHAT YOU'LL LEARN ================= -->
+  <section id="learn" class="py-24">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+      <div class="reveal order-2 md:order-1">
+        <p class="text-clay tracking-widest text-sm uppercase mb-3">What You'll Gain</p>
+        <h2 class="font-serif text-3xl sm:text-5xl mb-8">你会带走的，<br/>不只是一份证书</h2>
+        <ul class="space-y-5">
+          <li class="flex gap-4"><span class="text-clay text-xl">✦</span><div><p class="font-medium">实战技能</p><p class="text-taupe text-sm">在真实项目中掌握行业工具与流程。</p></div></li>
+          <li class="flex gap-4"><span class="text-clay text-xl">✦</span><div><p class="font-medium">作品集</p><p class="text-taupe text-sm">完成可放进简历的真实成果。</p></div></li>
+          <li class="flex gap-4"><span class="text-clay text-xl">✦</span><div><p class="font-medium">人脉与推荐信</p><p class="text-taupe text-sm">认识业内伙伴，获得真诚的背书。</p></div></li>
+          <li class="flex gap-4"><span class="text-clay text-xl">✦</span><div><p class="font-medium">实习证书</p><p class="text-taupe text-sm">正式的 SMARTG 实习完成证明。</p></div></li>
+        </ul>
+      </div>
+      <img class="reveal order-1 md:order-2 rounded-3xl object-cover w-full h-[420px] shadow-lg"
+           src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80" alt="" />
+    </div>
+  </section>
+
+  <!-- ================= 6. BENEFITS ================= -->
+  <section id="benefits" class="py-24 bg-sand">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-clay tracking-widest text-sm uppercase mb-3">Perks</p>
+        <h2 class="font-serif text-3xl sm:text-5xl">我们提供的福利</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="reveal bg-white rounded-2xl p-6 text-center border border-beige/60"><div class="text-3xl mb-3">💰</div><p class="font-medium">实习津贴</p><p class="text-taupe text-xs mt-1">Allowance</p></div>
+        <div class="reveal bg-white rounded-2xl p-6 text-center border border-beige/60"><div class="text-3xl mb-3">⏰</div><p class="font-medium">弹性时间</p><p class="text-taupe text-xs mt-1">Flexible Hours</p></div>
+        <div class="reveal bg-white rounded-2xl p-6 text-center border border-beige/60"><div class="text-3xl mb-3">📜</div><p class="font-medium">实习证书</p><p class="text-taupe text-xs mt-1">Certificate</p></div>
+        <div class="reveal bg-white rounded-2xl p-6 text-center border border-beige/60"><div class="text-3xl mb-3">🎯</div><p class="font-medium">转正通道</p><p class="text-taupe text-xs mt-1">Full-time Path</p></div>
+      </div>
+      <div class="text-center mt-14 reveal">
+        <!-- CTA #4 -->
+        <button data-cta="benefits"
+          class="inline-flex items-center gap-2 border-2 border-clay text-clay hover:bg-clay hover:text-cream transition-all px-8 py-3.5 rounded-full text-lg">
+          我要申请这些福利 →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. WHO WE'RE LOOKING FOR ================= -->
+  <section id="who" class="py-24">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+      <img class="reveal rounded-3xl object-cover w-full h-[420px] shadow-lg"
+           src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="" />
+      <div class="reveal">
+        <p class="text-clay tracking-widest text-sm uppercase mb-3">Who We Want</p>
+        <h2 class="font-serif text-3xl sm:text-5xl mb-4">我们在找<br/>这样的你</h2>
+        <p class="text-taupe mb-7 leading-relaxed">不限定岗位 — 不管你来自什么背景，我们都会在聊过之后，为你匹配最合适的位置。</p>
+        <ul class="space-y-4 text-taupe">
+          <li class="flex gap-3"><span class="text-clay">✓</span> 对学习充满热情，愿意主动尝试</li>
+          <li class="flex gap-3"><span class="text-clay">✓</span> 有责任心，能把事情做完做好</li>
+          <li class="flex gap-3"><span class="text-clay">✓</span> 善于沟通，乐于团队协作</li>
+          <li class="flex gap-3"><span class="text-clay">✓</span> 在校生 / 应届生 / 转行者皆欢迎</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8. TESTIMONIALS ================= -->
+  <section class="py-24 bg-espresso text-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-clay tracking-widest text-sm uppercase mb-3">Stories</p>
+        <h2 class="font-serif text-3xl sm:text-5xl">学长学姐怎么说</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="reveal bg-cream/5 backdrop-blur border border-cream/10 rounded-3xl p-8">
+          <p class="text-cream/85 leading-relaxed mb-6">"这里给了我真正动手的机会，三个月学到的比一年课堂还多。"</p>
+          <div class="flex items-center gap-3"><img class="w-11 h-11 rounded-full object-cover" src="https://i.pravatar.cc/100?img=12" alt=""/><div><p class="font-medium">陈同学</p><p class="text-cream/50 text-xs">前实习生 · 已转正</p></div></div>
+        </div>
+        <div class="reveal bg-cream/5 backdrop-blur border border-cream/10 rounded-3xl p-8">
+          <p class="text-cream/85 leading-relaxed mb-6">"团队氛围超好，前辈很愿意教，完全不会有被晾在一边的感觉。"</p>
+          <div class="flex items-center gap-3"><img class="w-11 h-11 rounded-full object-cover" src="https://i.pravatar.cc/100?img=32" alt=""/><div><p class="font-medium">Lim 同学</p><p class="text-cream/50 text-xs">市场部实习生</p></div></div>
+        </div>
+        <div class="reveal bg-cream/5 backdrop-blur border border-cream/10 rounded-3xl p-8">
+          <p class="text-cream/85 leading-relaxed mb-6">"实习结束后拿到的作品集，让我在求职时特别有底气。"</p>
+          <div class="flex items-center gap-3"><img class="w-11 h-11 rounded-full object-cover" src="https://i.pravatar.cc/100?img=45" alt=""/><div><p class="font-medium">Aisyah</p><p class="text-cream/50 text-xs">设计实习生</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 9. FAQ ================= -->
+  <section id="faq" class="py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <p class="text-clay tracking-widest text-sm uppercase mb-3">FAQ</p>
+        <h2 class="font-serif text-3xl sm:text-5xl">常见问题</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="reveal faq-item bg-white rounded-2xl border border-beige/60 overflow-hidden">
+          <button class="faq-toggle w-full flex justify-between items-center text-left px-6 py-5"><span class="font-medium">实习需要全职吗？</span><span class="faq-icon text-clay text-xl transition-transform">+</span></button>
+          <div class="faq-body px-6"><p class="text-taupe pb-5">时间可弹性安排，在校生可商量 part-time，详情面谈。</p></div>
+        </div>
+        <div class="reveal faq-item bg-white rounded-2xl border border-beige/60 overflow-hidden">
+          <button class="faq-toggle w-full flex justify-between items-center text-left px-6 py-5"><span class="font-medium">没有经验可以申请吗？</span><span class="faq-icon text-clay text-xl transition-transform">+</span></button>
+          <div class="faq-body px-6"><p class="text-taupe pb-5">完全可以！我们更看重态度和学习意愿，会从零开始带你。</p></div>
+        </div>
+        <div class="reveal faq-item bg-white rounded-2xl border border-beige/60 overflow-hidden">
+          <button class="faq-toggle w-full flex justify-between items-center text-left px-6 py-5"><span class="font-medium">实习多久？有津贴吗？</span><span class="faq-icon text-clay text-xl transition-transform">+</span></button>
+          <div class="faq-body px-6"><p class="text-taupe pb-5">一般为 3 个月起，提供实习津贴，具体面谈时说明。</p></div>
+        </div>
+        <div class="reveal faq-item bg-white rounded-2xl border border-beige/60 overflow-hidden">
+          <button class="faq-toggle w-full flex justify-between items-center text-left px-6 py-5"><span class="font-medium">我会被分到什么岗位？</span><span class="faq-icon text-clay text-xl transition-transform">+</span></button>
+          <div class="faq-body px-6"><p class="text-taupe pb-5">不需要现在决定。确认加入后，你会先和负责人聊一聊，再根据你的兴趣与能力，分派到最适合的岗位。</p></div>
+        </div>
+        <div class="reveal faq-item bg-white rounded-2xl border border-beige/60 overflow-hidden">
+          <button class="faq-toggle w-full flex justify-between items-center text-left px-6 py-5"><span class="font-medium">怎么申请？</span><span class="faq-icon text-clay text-xl transition-transform">+</span></button>
+          <div class="faq-body px-6"><p class="text-taupe pb-5">在下方填写资料并提交，我们会通过 WhatsApp 在 24 小时内联系你。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 10. FORM (glassmorphism) ================= -->
+  <section id="apply" class="relative py-28 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80"
+         class="absolute inset-0 w-full h-full object-cover" alt="" />
+    <div class="absolute inset-0 bg-espresso/60"></div>
+
+    <div class="relative z-10 max-w-xl mx-auto px-6">
+      <div class="text-center mb-8 text-cream reveal">
+        <h2 class="font-serif text-3xl sm:text-5xl mb-3">准备好加入了吗？</h2>
+        <p class="text-cream/80">填好资料，我们会在 24 小时内通过 WhatsApp 联系你，聊聊适合你的岗位。</p>
+      </div>
+
+      <!-- 玻璃拟态表单卡 -->
+      <form id="applyForm" novalidate
+        class="reveal bg-white/15 backdrop-blur-xl border border-white/40 rounded-3xl p-7 sm:p-9 shadow-2xl shadow-espresso/40 space-y-5">
+
+        <div>
+          <label class="block text-cream text-sm mb-1.5">姓名 Name</label>
+          <input name="name" type="text" placeholder="你的姓名"
+            class="w-full rounded-xl bg-white/80 border border-white/50 px-4 py-3 outline-none focus:ring-2 focus:ring-clay text-espresso placeholder:text-taupe/70" />
+          <p class="err text-red-200 text-xs mt-1 hidden">请填写姓名</p>
+        </div>
+
+        <div>
+          <label class="block text-cream text-sm mb-1.5">电话号码 Phone</label>
+          <input name="phone" type="tel" inputmode="numeric" placeholder="例：0123456789"
+            class="w-full rounded-xl bg-white/80 border border-white/50 px-4 py-3 outline-none focus:ring-2 focus:ring-clay text-espresso placeholder:text-taupe/70" />
+          <p class="err text-red-200 text-xs mt-1 hidden">请填写有效的电话号码（只限数字）</p>
+        </div>
+
+        <div>
+          <label class="block text-cream text-sm mb-1.5">Gmail 邮箱</label>
+          <input name="email" type="email" placeholder="yourname@gmail.com"
+            class="w-full rounded-xl bg-white/80 border border-white/50 px-4 py-3 outline-none focus:ring-2 focus:ring-clay text-espresso placeholder:text-taupe/70" />
+          <p class="err text-red-200 text-xs mt-1 hidden">请填写有效的 Gmail 邮箱</p>
+        </div>
+
+        <div>
+          <label class="block text-cream text-sm mb-1.5">目前职业 Current Occupation</label>
+          <input name="occupation" type="text" placeholder="例：学生 / 设计师 / 待业中"
+            class="w-full rounded-xl bg-white/80 border border-white/50 px-4 py-3 outline-none focus:ring-2 focus:ring-clay text-espresso placeholder:text-taupe/70" />
+          <p class="err text-red-200 text-xs mt-1 hidden">请填写目前职业</p>
+        </div>
+
+        <div>
+          <label class="block text-cream text-sm mb-1.5">居住区域 Residential Area</label>
+          <input name="area" type="text" placeholder="例：Kuala Lumpur / Johor Bahru"
+            class="w-full rounded-xl bg-white/80 border border-white/50 px-4 py-3 outline-none focus:ring-2 focus:ring-clay text-espresso placeholder:text-taupe/70" />
+          <p class="err text-red-200 text-xs mt-1 hidden">请填写居住区域</p>
+        </div>
+
+        <!-- CTA #5 = submit -->
+        <button id="submitBtn" type="submit"
+          class="w-full flex items-center justify-center gap-2 bg-clay hover:bg-mocha disabled:opacity-60 transition-all px-8 py-4 rounded-xl text-cream text-lg shadow-lg">
+          <span id="submitLabel">提交并联系 WhatsApp</span>
+          <svg id="submitSpinner" class="hidden animate-spin h-5 w-5" viewBox="0 0 24 24" fill="none">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.4 0 0 5.4 0 12h4z"></path>
+          </svg>
+        </button>
+
+        <p id="formSuccess" class="hidden text-center text-cream bg-clay/40 border border-cream/30 rounded-xl py-3">
+          ✅ 收到！正在为你跳转到 WhatsApp...
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= 11. FOOTER ================= -->
+  <footer class="bg-espresso text-cream/80 pt-16 pb-10">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="flex items-center justify-center gap-2 mb-5">
+        <span class="w-9 h-9 rounded-full bg-clay flex items-center justify-center text-cream font-serif">S</span>
+        <span class="font-serif text-2xl">SMARTG SDN BHD</span>
+      </div>
+      <p class="text-cream/60 max-w-md mx-auto mb-8 text-sm">关注我们，了解团队的更多日常与最新招募信息。</p>
+
+      <!-- Social icons：把 href 换成你们真实的链接 -->
+      <div class="flex items-center justify-center gap-5 mb-10">
+        <!-- Instagram -->
+        <a href="YOUR_INSTAGRAM_URL_HERE" target="_blank" aria-label="Instagram"
+           class="w-11 h-11 rounded-full bg-cream/10 hover:bg-clay transition-colors flex items-center justify-center">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38C1.36 2.67.95 3.34.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.12-1.38.66-.66 1.07-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.12-.66-.66-1.33-1.07-2.12-1.38-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zm0 10.16A4 4 0 1116 12a4 4 0 01-4 4zm6.41-10.4a1.44 1.44 0 11-1.44-1.44 1.44 1.44 0 011.44 1.44z"/></svg>
+        </a>
+        <!-- Facebook -->
+        <a href="YOUR_FACEBOOK_URL_HERE" target="_blank" aria-label="Facebook"
+           class="w-11 h-11 rounded-full bg-cream/10 hover:bg-clay transition-colors flex items-center justify-center">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </a>
+        <!-- TikTok -->
+        <a href="YOUR_TIKTOK_URL_HERE" target="_blank" aria-label="TikTok"
+           class="w-11 h-11 rounded-full bg-cream/10 hover:bg-clay transition-colors flex items-center justify-center">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.04-.1z"/></svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER_HERE" target="_blank" aria-label="WhatsApp"
+           class="w-11 h-11 rounded-full bg-cream/10 hover:bg-clay transition-colors flex items-center justify-center">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.06 24l1.68-6.15a11.87 11.87 0 01-1.59-5.95C.15 5.32 5.49 0 12.05 0a11.82 11.82 0 018.42 3.49 11.82 11.82 0 013.48 8.41c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.69-1.45L.06 24zm6.6-3.8c1.68.99 3.28 1.59 5.39 1.59 5.45 0 9.89-4.43 9.89-9.88a9.8 9.8 0 00-2.9-7 9.78 9.78 0 00-6.98-2.9c-5.46 0-9.9 4.44-9.9 9.89a9.8 9.8 0 001.51 5.26l-.99 3.62 3.98-1.04zm11.39-5.55c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.69.25-1.29.17-1.41z"/></svg>
+        </a>
+      </div>
+
+      <div class="border-t border-cream/10 pt-6 text-xs text-cream/40">
+        © <span id="year"></span> SMARTG SDN BHD. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================= -->
+  <!--  JAVASCRIPT                                                    -->
+  <!-- ============================================================= -->
+  <script>
+    /* =====================================================
+       ⚙️  配置区 — 上线前把这两个占位符换成你们真实的值
+       ===================================================== */
+    const WHATSAPP_NUMBER  = "YOUR_WHATSAPP_NUMBER_HERE";        // 例："60123456789"（国家码+号码，不要+号/空格）
+    const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_WEBHOOK_URL_HERE"; // 部署 Code.gs 后得到的 Web App URL
+    /* ===================================================== */
+
+    // 页脚年份
+    document.getElementById('year').textContent = '2026';
+
+    // ---- 前 4 个 CTA：平滑滚动到表单 ----
+    document.querySelectorAll('[data-cta]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // ---- 滚动淡入 ----
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // ---- FAQ 折叠 ----
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const open = body.style.maxHeight && body.style.maxHeight !== '0px';
+        // 关掉其他
+        document.querySelectorAll('.faq-body').forEach(b => { b.style.maxHeight = '0px'; });
+        document.querySelectorAll('.faq-icon').forEach(i => { i.style.transform = 'rotate(0deg)'; i.textContent = '+'; });
+        if (!open) { body.style.maxHeight = body.scrollHeight + 'px'; icon.style.transform = 'rotate(45deg)'; }
+      });
+    });
+
+    // ---- 表单提交 ----
+    const form = document.getElementById('applyForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitLabel = document.getElementById('submitLabel');
+    const submitSpinner = document.getElementById('submitSpinner');
+    const successMsg = document.getElementById('formSuccess');
+
+    function validate(data) {
+      let ok = true;
+      const fields = form.querySelectorAll('input');
+      fields.forEach(input => {
+        const err = input.parentElement.querySelector('.err');
+        let invalid = !input.value.trim();
+        if (input.name === 'phone'  && input.value.trim()) invalid = !/^\d{7,15}$/.test(input.value.replace(/\s/g,''));
+        if (input.name === 'email'  && input.value.trim()) invalid = !/^[^\s@]+@gmail\.com$/i.test(input.value.trim());
+        if (invalid) { err.classList.remove('hidden'); ok = false; }
+        else { err.classList.add('hidden'); }
+      });
+      return ok;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = {
+        name:       form.name.value.trim(),
+        phone:      form.phone.value.trim(),
+        email:      form.email.value.trim(),
+        occupation: form.occupation.value.trim(),
+        area:       form.area.value.trim(),
+        timestamp:  new Date().toLocaleString('zh-Hans'),
+      };
+
+      if (!validate(data)) return;
+
+      // loading 状态
+      submitBtn.disabled = true;
+      submitLabel.textContent = '提交中...';
+      submitSpinner.classList.remove('hidden');
+
+      // a) 发送到 Google Sheets（no-cors，不阻塞跳转）
+      try {
+        if (GOOGLE_SCRIPT_URL && !GOOGLE_SCRIPT_URL.includes('YOUR_')) {
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+        }
+      } catch (err) {
+        console.warn('Google Sheets 发送失败：', err);
+      }
+
+      // b) 组装 WhatsApp 消息并跳转
+      const msg =
+        `🎓 *SMARTG 实习申请* 🎓\n\n` +
+        `👤 姓名：${data.name}\n` +
+        `📞 电话：${data.phone}\n` +
+        `📧 Gmail：${data.email}\n` +
+        `💼 目前职业：${data.occupation}\n` +
+        `📍 居住区域：${data.area}\n\n` +
+        `（来自 Landing Page · ${data.timestamp}）`;
+
+      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      successMsg.classList.remove('hidden');
+      setTimeout(() => {
+        window.location.href = waUrl;
+        // 复位（用户返回时）
+        submitBtn.disabled = false;
+        submitLabel.textContent = '提交并联系 WhatsApp';
+        submitSpinner.classList.add('hidden');
+      }, 900);
+    });
+  </script>
+</body>
+</html>
