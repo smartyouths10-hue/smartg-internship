@@ -65,7 +65,7 @@
         <span class="w-8 h-8 rounded-full bg-clay flex items-center justify-center text-cream font-serif text-lg">S</span>
         <span class="font-serif text-xl tracking-wide text-espresso">SMARTG</span>
       </a>
-      <span class="text-xs sm:text-sm text-taupe tracking-widest uppercase">Internship 2026</span>
+      <span class="text-xs sm:text-sm text-taupe tracking-widest uppercase">实习计划 · Internship</span>
     </div>
   </header>
 
@@ -78,7 +78,7 @@
 
     <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 text-cream">
       <span class="inline-block mb-5 px-4 py-1.5 rounded-full text-xs sm:text-sm tracking-wider bg-cream/15 backdrop-blur border border-cream/30">
-        2026 实习生招募中 · Now Hiring
+        实习生招募中 · Now Hiring
       </span>
       <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl leading-tight mb-6 max-w-3xl">
         加入 SMARTG，<br/>开启你的第一段<br class="sm:hidden"/>真实职场经历
@@ -395,7 +395,7 @@
       </div>
 
       <div class="border-t border-cream/10 pt-6 text-xs text-cream/40">
-        © <span id="year"></span> SMARTG SDN BHD. All rights reserved.
+        © SMARTG SDN BHD. All rights reserved.
       </div>
     </div>
   </footer>
@@ -409,10 +409,12 @@
        ===================================================== */
     const WHATSAPP_NUMBER  = "YOUR_WHATSAPP_NUMBER_HERE";        // 例："60123456789"（国家码+号码，不要+号/空格）
     const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_WEBHOOK_URL_HERE"; // 部署 Code.gs 后得到的 Web App URL
-    /* ===================================================== */
 
-    // 页脚年份
-    document.getElementById('year').textContent = '2026';
+    // 下面两行会出现在发给负责人的 WhatsApp 消息里，让负责人知道「从哪来 + 什么项目」
+    // 如果你在不同平台（IG/FB/小红书…）放不同链接，可以各自改 SOURCE_LABEL 来分辨来源
+    const SOURCE_LABEL   = "实习招募 Landing Page";              // 来源
+    const POSITION_LABEL = "SMARTG 实习生计划（岗位面谈后分派）"; // 申请的项目/岗位
+    /* ===================================================== */
 
     // ---- 前 4 个 CTA：平滑滚动到表单 ----
     document.querySelectorAll('[data-cta]').forEach(btn => {
@@ -495,13 +497,17 @@
 
       // b) 组装 WhatsApp 消息并跳转
       const msg =
-        `🎓 *SMARTG 实习申请* 🎓\n\n` +
+        `您好！我想申请 SMARTG 的实习 🎓\n` +
+        `（此讯息由网页自动生成，方便您了解我的资料与来源）\n\n` +
+        `以下是我填写的资料：\n` +
         `👤 姓名：${data.name}\n` +
         `📞 电话：${data.phone}\n` +
         `📧 Gmail：${data.email}\n` +
         `💼 目前职业：${data.occupation}\n` +
         `📍 居住区域：${data.area}\n\n` +
-        `（来自 Landing Page · ${data.timestamp}）`;
+        `📌 来源 Source：${SOURCE_LABEL}\n` +
+        `📌 申请项目 Position：${POSITION_LABEL}\n` +
+        `🕒 提交时间：${data.timestamp}`;
 
       const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 
